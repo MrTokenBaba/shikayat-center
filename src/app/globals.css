@@ -1,8 +1,15 @@
 @import "tailwindcss";
+/*@import "../style/theme.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@plugin "daisyui";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --grid-line-color : color-mix(in oklab, var(--color-gray-950) 5%, transparent);
 }
 
 @theme inline {
@@ -23,4 +30,60 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.bg-plum {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 43 125 / var(--tw-bg-opacity));
+}
+.solid-bar-with-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  z-index: 50;
+}
+.bg-violet-500\/90 {
+  background-color: #5156bee6 !important;
+}
+
+.bg-bubbles li {
+  -webkit-animation: square ease 20s infinite;
+  animation: square ease 20s infinite;
+  bottom: -50px;
+}
+
+.bg-bubbles li:nth-child(2) {
+  -webkit-animation: square ease 17s infinite;
+  animation: square ease 17s infinite;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.bg-bubbles li:nth-child(3) {
+  -webkit-animation: square ease 20s infinite;
+  animation: square ease 20s infinite;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+.bg-bubbles li:nth-child(4) {
+  -webkit-animation: square ease 22s infinite;
+  animation: square ease 22s infinite;
+}
+
+.bg-bubbles li:nth-child(6) {
+  -webkit-animation: square ease 20s infinite;
+  animation: square ease 20s infinite;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+
+
+
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    /* -webkit-transform: translateY(-1000px) rotate(600deg); */
+    transform: translateY(-1000px) rotate(600deg);
+  }
 }
