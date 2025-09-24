@@ -13,13 +13,11 @@ const connect = async () =>{
         console.log('Connecting....');
         return;
     }
-
     try{
         mongoose.connect(MONGODB_URI!, {
             dbName: 'shikayatcenter',
             bufferCommands: true,
         });
-
         console.log('Connected to DB');
     }catch(err: any){
         console.log("Error ", err);

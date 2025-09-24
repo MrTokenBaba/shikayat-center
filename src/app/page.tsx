@@ -15,7 +15,7 @@ export default function Home() {
 
             <FourSteps/>
 
-            {/*<div data-sc="mobile-modules-nav"
+                {/*<div data-sc="mobile-modules-nav"
                      className="sticky top-0 z-30 h-[90px] border-b-[1px] border-lunar bg-pebble lg:hidden">
                     <button data-testid="mobile-menu-title"
                             className="flex h-full w-full items-center justify-between px-6 text-left"

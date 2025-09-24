@@ -1,8 +1,14 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { VscRepoClone    } from "react-icons/vsc";
+import Link from "next/link";
+/*import {SessionProvider} from "next-auth/react";*/
+/*import UserButton from "@components/user-button";*/
+
+
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+
 
     return (
         <div className="bg-plum">
@@ -17,21 +23,27 @@ export default function Header() {
                                 </a>
 
                                 <nav className="ml-20 flex space-x-2 lg:space-x-5 xl:space-x-1 2xl:space-x-5 ">
-                                    <a href="/company" className="group relative font-medium text-white">Trend 100 Company </a>
-                                    <a href="/complaints" className="group relative font-medium text-white">Complaints</a>
+                                    <Link href="/company" className="group relative font-medium text-white">Trend 100 Company </Link>
+                                    <Link href="/complaints" className="group relative font-medium text-white">Complaints</Link>
+                                    <Link href="/dashboard" className="group relative font-medium text-white">Dashboard</Link>
+
                                 </nav>
                             </div>
                             <div className={'flex'}></div>
+
                             <div className="flex items-center justify-end space-x-3">
-                                <a className="z-10 relative items-center justify-center rounded-md
+                                <Link className="z-10 relative items-center justify-center rounded-md
                                 font-medium 2xl:px-6 2xl:py-3.5 px-5 py-3 copy-body  border border-white text-white
                                 inline-flex whitespace-nowrap group"
-                                href="/login"> Login / Sign up </a>
-                                <a  className="z-10 relative items-center justify-center rounded-md
+                                href="/signin"> Login / Sign up </Link>
+
+                                <Link  className="z-10 relative items-center justify-center rounded-md
                                 transition-all font-medium 2xl:px-6 2xl:py-3.5 px-5 py-3 copy-body button_primaryButton__FEBF9
                                  bg-blurple text-white overflow-hidden inline-flex whitespace-nowrap"
-                                href="" > + File a complaint</a>
+                                href="" > + File a complaint</Link>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -73,6 +85,13 @@ export default function Header() {
                     </div>
                 </div>
             </div>
+            <div className={'my-4 py-5 bg-white'}>
+              {/*  <SessionProvider>
+                    <UserButton />
+                </SessionProvider>*/}
+
+            </div>
+
         </div>
     );
 }

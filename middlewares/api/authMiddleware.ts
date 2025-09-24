@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 
-
 const validate = (token: any) => {
    const validToken = true
     if(!validToken || !token) {

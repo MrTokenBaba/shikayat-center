@@ -16,7 +16,7 @@ export default function HeroSection() {
                         <div className="space-y-4">
                             <h1 className="text-opacity-30 leading-[1.2] lg:font-bold text-[20px] font-bold sm:block sm:text-[3rem] md:text-[40px]
                             [@media(min-width:1240px)]:text-[45px] 3xl:text-[80px]">
-                                <span className="text-white/[.8]">İstanbul Aydın Üniversitesi justme </span>
+                                <span className="text-white/[.8]">İstanbul Aydın Üniversitesi111111</span>
                                 <span className="block text-white/[.8]">Geri Bildirim Sistemine<br/>Hoş Geldiniz.</span>
                             </h1>
                         </div>
