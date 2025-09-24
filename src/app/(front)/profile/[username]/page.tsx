@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from "react";
 import ProfileCard from "@components/company/ProfileCard";
 import {VscEye} from "react-icons/vsc";
@@ -9,8 +9,6 @@ interface ProfileViewProps {
         id: string;
     }
 }
-
-
 const ProfileView = async ({params}: ProfileViewProps) =>{
     const {username} = params;
     const [currentPage1, setCurrentPage1] = useState(1);

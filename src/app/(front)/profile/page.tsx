@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from "react";
-/*import ProfileCard from "@components/company/ProfileCard";*/
+import ProfileCard from "@components/company/ProfileCard";
 import {VscEye} from "react-icons/vsc";
 
 interface ProfileViewProps {
@@ -70,7 +70,7 @@ const ProfileView = async ({params}: ProfileViewProps) =>{
         <div
             className="hide-scrollbar m-auto w-full max-w-[1460px] snap-x snap-mandatory overflow-scroll px-8 py-8 sm:pl-40 sm:pr-52 md:px-6 lg:px-20 xl:px-28">
 
-         {/*   <ProfileCard profile={profileData} />*/}
+            <ProfileCard profile={profileData} />
             <div className="flex flex-col py-4 w-[1300px] grid-cols-4 gap-4 sm:w-[1450px] sm:grid-cols-[1.5fr,1fr,1fr,1fr] md:w-auto md:grid-cols-3 ">
                 {currentCompanies.map((review) => (
                     (
